@@ -1,0 +1,35 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:RomanCalc.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="450"
+        x:Class="RomanCalc.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="RomanCalc"
+        MinHeight="450"
+        MinWidth="450"
+        MaxHeight="450"
+        MaxWidth="450">
+
+    
+    <Window.Styles>
+        <StyleInclude Source="/Styles/Styles1.axaml"/>
+    </Window.Styles>
+
+    <Grid Classes="calc"  ShowGridLines="False" ColumnDefinitions="*, *, *, *" RowDefinitions="*, *, *, *">
+        <TextBox Name="Output" Classes="calcTextBox" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"/>
+        <Button CommandParameter="I" Classes="calcBtn" Grid.Row="1" Grid.Column="0" Content="I"/>
+        <Button CommandParameter="V" Classes="calcBtn" Grid.Row="1" Grid.Column="1" Content="V"/>
+        <Button CommandParameter="X" Classes="calcBtn" Grid.Row="1" Grid.Column="2" Content="X"/>
+        <Button CommandParameter="*" Classes="calcBtn" Grid.Row="1" Grid.Column="3" Content="*"/>
+        <Button CommandParameter="L" Classes="calcBtn" Grid.Row="2" Grid.Column="0" Content="L"/>
+        <Button CommandParameter="C" Classes="calcBtn" Grid.Row="2" Grid.Column="1" Content="C"/>
+        <Button CommandParameter="+" Classes="calcBtn" Grid.Row="2" Grid.Column="2" Content="+"/>
+        <Button CommandParameter="/" Classes="calcBtn" Grid.Row="2" Grid.Column="3" Content="/"/>
+        <Button CommandParameter="D" Classes="calcBtn" Grid.Row="3" Grid.Column="0" Content="D"/>
+        <Button CommandParameter="M" Classes="calcBtn" Grid.Row="3" Grid.Column="1" Content="M"/>
+        <Button CommandParameter="-" Classes="calcBtn" Grid.Row="3" Grid.Column="2" Content="-"/>
+        <Button CommandParameter="=" Classes="calcBtn" Grid.Row="3" Grid.Column="3" Content="="/>
+    </Grid>
+</Window>
